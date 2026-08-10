@@ -308,8 +308,10 @@
             }
             }).then(response => {
             if (response.ok) {
-                status.innerHTML = "Thanks for your submission! We will get in touch with you";
-                form.reset()
+                // status.innerHTML = "Thanks for your submission! We will get in touch with you";
+                // form.reset()
+                form.reset();
+                window.location.href = "/thankyou.html";
             } else {
                 response.json().then(data => {
                 if (Object.hasOwn(data, 'errors')) {
